@@ -1,0 +1,39 @@
+.mat-body,
+.mat-body-1,
+.mat-typography {
+	font: 400 14px/18px $base-font;
+}
+.mat-dialog-container,
+.mat-card{
+	color:$primary-color;
+}
+.mat-dialog-container{
+	position: relative;
+}
+.mat-tab-label,
+.mat-tab-link,
+.mat-list-item {
+	font-family: $base-font;
+}
+.mat-form-field,
+.mat-select,
+.mat-option{
+	font-family:$base-font;
+	font-size: 14px !important;
+}
+.mat-option-text{
+	font-size: 15px !important;
+}
+
+
+.mat-badge-accent .mat-badge-content {
+    background: $secondary-color;
+    color: #fff;
+}
+.mat-form-field{
+	display: block !important;
+	.mat-form-field-infix{
+        width:100% !important;
+	}
+}
+

@@ -1,0 +1,14 @@
+<div class="to-do-form">
+   <form [formGroup]="todoForm" (ngSubmit)="submitTodo(todoForm)">
+    <div class="form-ctrl">
+        <mat-form-field class="example-full-width">
+            <mat-label>What need to be done?</mat-label>
+            <input matInput placeholder="Enter Here" required formControlName="title">
+          </mat-form-field>
+    </div>
+    <div class="form-ctrl">
+        <button mat-raised-button color="primary" >Add</button>
+    </div>
+   </form>
+    
+</div>

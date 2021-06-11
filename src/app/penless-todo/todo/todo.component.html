@@ -1,0 +1,42 @@
+<section class="todo-wrapper">
+    <div class="row">
+        <div class="col-lg-8">
+            <app-todo-form (sendFormData)="getData($event)"></app-todo-form>
+            <div class="list-rows">
+                <app-todo-list [dataForm]="dataForm" (sendUpdatedData)="getUpdatedData($event)"></app-todo-list>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <section class="todo-board">
+                <h3 class="d-flex"> 📝 <div>Todo Board</div>
+                </h3>
+                <p>
+                    <ngb-progressbar [showValue]="true" type="success" [value]="progress"></ngb-progressbar>
+                </p>
+
+                <hr />
+                <small>
+                    ( <span>List</span> <span> {{todosCompleted.length}} / {{listDataTodos.length}}</span> )
+                </small>
+                <hr />
+
+                <div className="row">
+
+                    <div className="col-6">
+                        <strong>All : </strong> {{listDataTodos.length}}
+                    </div>
+
+                    <div className="col-6">
+                        <strong>Done : </strong>{{todosCompleted.length}}
+                    </div>
+                </div>
+
+                <hr />
+
+                <div>
+                    <p>We don't store data on server. 🙂</p>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
