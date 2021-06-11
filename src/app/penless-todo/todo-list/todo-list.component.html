@@ -1,7 +1,7 @@
 <mat-list role="list" class="list-t">
   <mat-list-item role="listitem" *ngFor="let data of listData; let i = index"
     [ngClass]="{ 'completed': data.completed === true }">
-    <ng-container *ngIf="!isEdit && i != selectedIndex">
+    <ng-container *ngIf=" i != selectedIndex">
       <mat-slide-toggle [checked]="data.completed" (change)="compFunct($event,data,i)">{{data?.title}}
       </mat-slide-toggle>
 
